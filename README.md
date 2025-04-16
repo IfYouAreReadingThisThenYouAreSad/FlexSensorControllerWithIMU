@@ -4,6 +4,9 @@
 
 This is the code for my final year project at the University of Manchester. In this project, a controller is used with flex sensors and an IMU to replace a traditional keyboard and mouse for disabled users. This controller uses the Arduino IDE with its libraries, and the `blekeyboard.h` and `bleMouse.h` libraries, which you can find in the installation section. The goal of this controller is to send keyboard strokes using the flex sensors, and use the IMU to set different wrist orientations that send unique keyboard strokes. For example, if the user's palm is facing up and they flex their thumb, index, middle, third, and pinky fingers, it would send "A", "B", "C", and "D". Now, if the user rotates their palm 180 degrees and flexes their thumb, index, middle, third, and pinky fingers, it would send "W", "Y", "V", "M", and "L".
 
+![Mind Map of Project Components](https://raw.githubusercontent.com/IfYouAreReadingThisThenYouAreSad/FlexSensorControllerWithIMU/main/mind%20map%20of%20project%20componets.jpeg)
+
+
 There is also a mouse mode within the controller. The idea is that the user can press a button to switch between keyboard and mouse modes. The mouse mode works with the flexed fingers acting as the left and right click buttons, and the gyroscope acting as the way to move the mouse.
 
 ## 2.0 Component Breakdown
@@ -17,6 +20,8 @@ There is also a mouse mode within the controller. The idea is that the user can 
 ## 3.0 Context on How It Works
 
 As seen in the image below, it shows how the keyboard code works in an abstract view. Note that the mouse code works in a similar structure, but due to the free software I was using (e.g., Lucid), I couldn't add more block diagrams.
+
+![Flow Diagram of Keyboard Code](https://raw.githubusercontent.com/IfYouAreReadingThisThenYouAreSad/FlexSensorControllerWithIMU/main/Flow%20diagram%20of%20keyboard%20code.jpeg)
 
 The code works by first looping an LED on and off until it is connected to a device via Bluetooth. From here, the controller will be able to send keyboard strokes when the flex sensor is bent. This works by a series of if and switch statements.
 
